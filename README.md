@@ -1,5 +1,4 @@
 <h1 align="center">
-	<br>
 	<img width="320" src="media/logo.jpeg" alt="Joi extensions">
 	<br>
 	<br>
