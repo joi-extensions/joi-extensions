@@ -7,3 +7,8 @@
 	<br>
 </h1>
 
+Extensions for Joi validator.
+
+[![Build Status](https://travis-ci.org/joi-extensions/joi-extensions.svg?branch=master)](https://travis-ci.org/joi-extensions/joi-extensions.svg?branch=master)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/AlbertHambardzumyan/fraction-js/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/joi-extensions/joi-extensions.svg)](https://github.com/joi-extensions/joi-extensions/issues)
