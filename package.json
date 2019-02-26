@@ -1,0 +1,40 @@
+{
+  "name": "joi-extensions",
+  "description": "Joi extensions",
+  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/joi-extensions/joi-extensions/issues"
+  },
+  "contributors": [
+    {
+      "name": "Albert Hambardzumyan",
+      "email": "hambardzumyan.albert@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "bson": "4.0.1",
+    "joi": "14.3.1"
+  },
+  "devDependencies": {
+    "jest": "24.1.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "homepage": "https://github.com/joi-extensions/joi-extensions#readme",
+  "keywords": [
+    "Extensions",
+    "Joi",
+    "Mongodb",
+    "ObjectId"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joi-extensions/joi-extensions.git"
+  },
+	"scripts": {
+		"test": "jest --silent"
+	}
+}
