@@ -18,5 +18,17 @@ Extensions for Joi validator.
  npm install @joi-extensions/joi-extensions
 ```
 
+# Usage
+
+Usage is a two steps process. First, a schema is constructed using the provided types and constraints:
+
+```js
+const BaseJoi = require('joi');
+const Extension = require('@joi-extensions/joi-extensions');
+const Joi = BaseJoi.extend(Extension);
+
+const schema = Joi.array().even();
+````
+
 # API
 See the detailed [API Reference](API.md).
