@@ -24,7 +24,7 @@ const BaseJoi = require('joi');
 const Extension = require('@joi-extensions/joi-extensions');
 const Joi = BaseJoi.extend(Extension);
 
-const schema = Joi.array().even();
+const schema = Joi.string().objectId();
 ````
 
 # API
