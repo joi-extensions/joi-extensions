@@ -1,7 +1,7 @@
 const BaseJoi = require('joi')
 
-const JoiArrayExtensions = require('../lib/array.extensions')
-const Joi = BaseJoi.extend(JoiArrayExtensions)
+const {ArrayExtensions} = require('../lib')
+const Joi = BaseJoi.extend(ArrayExtensions)
 
 describe('array extensions', () => {
   describe('even()', () => {

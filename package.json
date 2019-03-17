@@ -1,7 +1,7 @@
 {
   "name": "@joi-extensions/joi-extensions",
   "description": "Joi extensions",
-  "version": "0.0.1-beta",
+  "version": "0.0.1",
   "bugs": {
     "url": "https://github.com/joi-extensions/joi-extensions/issues"
   },
@@ -23,13 +23,15 @@
   },
   "homepage": "https://github.com/joi-extensions/joi-extensions#readme",
   "keywords": [
-    "Extensions",
-    "Joi",
-    "Mongodb",
-    "ObjectId"
+    "even",
+    "extensions",
+    "joi",
+    "mongodb",
+    "objectId",
+    "odd"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joi-extensions/joi-extensions.git"

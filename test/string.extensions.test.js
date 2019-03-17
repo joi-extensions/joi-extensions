@@ -1,8 +1,8 @@
 const {ObjectId} = require('bson')
 const BaseJoi = require('joi')
 
-const JoiStringExtensions = require('../lib/string.extensions')
-const Joi = BaseJoi.extend(JoiStringExtensions)
+const {StringExtensions} = require('../lib')
+const Joi = BaseJoi.extend(StringExtensions)
 
 describe('string extensions', () => {
   const validId = ObjectId.createPk()
