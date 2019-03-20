@@ -21,19 +21,19 @@ Extensions for Joi validator.
 Usage is a two steps process. First, a schema is constructed using the provided types and constraints:
 
 ```js
-const BaseJoi = require('joi');
-const {StringExtensions} = require('@joi-extensions/joi-extensions');
-const Joi = BaseJoi.extend(StringExtensions);
+const BaseJoi = require('joi')
+const {StringExtensions} = require('@joi-extensions/joi-extensions')
+const Joi = BaseJoi.extend(StringExtensions)
 
-const schema = Joi.string().objectId();
+const schema = Joi.string().objectId()
 ````
 
 ```js
-const BaseJoi = require('joi');
-const {ArrayExtensions} = require('@joi-extensions/joi-extensions');
-const Joi = BaseJoi.extend(ArrayExtensions);
+const BaseJoi = require('joi')
+const {ArrayExtensions} = require('@joi-extensions/joi-extensions')
+const Joi = BaseJoi.extend(ArrayExtensions)
 
-const schema = Joi.array().even();
+const schema = Joi.array().even()
 ````
 
 # API
