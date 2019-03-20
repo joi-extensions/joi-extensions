@@ -1,6 +1,7 @@
 - [Joi Extensions](#joi-extensions)
   - [`string`](#string)
     - [`string.objectId()`](#stringobjectid)
+    - [`string.colorHexCode()`](#stringcolorhexcode)    
   - [`array`](#array)
     - [`array.even()`](#arrayeven)
     - [`array.odd()`](#arrayodd)
@@ -15,7 +16,15 @@
 Requires the string to be valid ObjectId.
 
 ```js
-const schema = Joi.string().objectId();
+const schema = Joi.string().objectId()
+```
+
+#### `string.colorHexCode()`
+
+Requires the string to be valid color hex code.
+
+```js
+const schema = Joi.string().colorHexCode()
 ```
 
 
@@ -26,7 +35,7 @@ const schema = Joi.string().objectId();
 Requires the array length to be even.
 
 ```js
-const schema = Joi.array().even();
+const schema = Joi.array().even()
 ```
 
 #### `array.odd()`
@@ -34,5 +43,5 @@ const schema = Joi.array().even();
 Requires the array length to be odd.
 
 ```js
-const schema = Joi.array().odd();
+const schema = Joi.array().odd()
 ```
