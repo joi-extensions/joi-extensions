@@ -23,12 +23,14 @@
   },
   "homepage": "https://github.com/joi-extensions/joi-extensions#readme",
   "keywords": [
+    "array",
     "even",
     "extensions",
     "joi",
     "mongodb",
     "objectId",
-    "odd"
+    "odd",
+    "string"
   ],
   "license": "MIT",
   "main": "lib/index.js",
