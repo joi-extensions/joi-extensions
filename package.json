@@ -1,7 +1,7 @@
 {
   "name": "@joi-extensions/joi-extensions",
   "description": "Joi extensions",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "bugs": {
     "url": "https://github.com/joi-extensions/joi-extensions/issues"
   },
