@@ -6,46 +6,30 @@ const Joi = BaseJoi.extend(StringExtensions)
 
 describe('string extensions', () => {
   describe('objectId()', () => {
-    const validId = ObjectId.createPk()
-    const invalidId = 'mock-id'
-
     const schema = Joi.string().objectId()
 
-    it('should be valid. Input is string. Output is ObjectId.', () => {
-      const result = Joi.validate(String(validId), schema)
+    it('should be valid. The input is a valid ObjectId.', () => {
+      const value = String(ObjectId.createPk())
+      const result = schema.validate(value)
 
-      expect(result.error).toBeNull()
-      expect(result.value instanceof ObjectId).toBe(true)
-      expect(result.value).toEqual(validId)
+      expect(result.error).toBeUndefined()
+      expect(result.value).toBe(value)
     })
 
-    it('should be valid. Input is string. Output is string.', () => {
-      const result = Joi.validate(String(validId), schema, {convert: false})
-
-      expect(result.error).toBeNull()
-      expect(typeof result.value).toBe('string')
-      expect(result.value).toEqual(String(validId))
-    })
-
-    it('should be valid. Input is undefined.', () => {
-      const result = Joi.validate(undefined, schema)
-
-      expect(result.error).toBe(null)
-      expect(result.value).toBeUndefined()
-    })
-
-    it('should be invalid. Input is invalid string.', () => {
-      const result = Joi.validate(invalidId, schema)
+    it('should be invalid. The input is invalid ObjectId.', () => {
+      const value = 'mock-id'
+      const result = schema.validate(value)
 
       expect(result.error.details[0].message).toBe('"value" must be a valid ObjectId')
-      expect(result.value).toEqual(invalidId)
+      expect(result.value).toEqual(value)
     })
 
-    it('should be invalid. Input is null', () => {
-      const result = Joi.validate(null, schema)
+    it('should be invalid. The input is null', () => {
+      const value = null
+      const result = schema.validate(value)
 
       expect(result.error.details[0].message).toBe('"value" must be a string')
-      expect(result.value).toEqual(null)
+      expect(result.value).toBeNull()
     })
   })
 
@@ -53,30 +37,27 @@ describe('string extensions', () => {
     const schema = Joi.string().colorHexCode()
 
     it('should be valid. The input is a valid color hex code.', () => {
-      const args = '#ffffff'
+      const value = '#ffffff'
+      const result = schema.validate(value)
 
-      const result = Joi.validate(args, schema)
-
-      expect(result.error).toBeNull()
-      expect(result.value).toEqual(args)
+      expect(result.error).toBeUndefined()
+      expect(result.value).toEqual(value)
     })
 
     it('should be invalid. The value must be a string.', () => {
-      const args = null
-
-      const result = Joi.validate(args, schema)
+      const value = null
+      const result = schema.validate(value)
 
       expect(result.error.details[0].message).toBe('"value" must be a string')
-      expect(result.value).toEqual(args)
+      expect(result.value).toEqual(value)
     })
 
     it('should be invalid. The value must be a valid color hex code.', () => {
-      const args = 'mock-color'
-
-      const result = Joi.validate(args, schema)
+      const value = 'mock-color'
+      const result = schema.validate(value)
 
       expect(result.error.details[0].message).toBe('"value" must be a valid color hex code')
-      expect(result.value).toEqual(args)
+      expect(result.value).toEqual(value)
     })
   })
 })

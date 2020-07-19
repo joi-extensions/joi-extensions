@@ -16,19 +16,21 @@
   },
   "devDependencies": {
     "jest": "24.1.0",
-    "joi": "14.3.1"
+    "joi": "17.1.1"
   },
   "engines": {
     "node": ">=6.0.0"
   },
   "homepage": "https://github.com/joi-extensions/joi-extensions#readme",
   "keywords": [
+    "array",
     "even",
     "extensions",
     "joi",
     "mongodb",
     "objectId",
-    "odd"
+    "odd",
+    "string"
   ],
   "license": "MIT",
   "main": "lib/index.js",
