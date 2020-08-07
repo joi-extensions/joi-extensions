@@ -1,4 +1,6 @@
 - [Joi Extensions](#joi-extensions)
+  - [`any`](#any)
+    - [`any.sizeof(limit)`](#anysizeoflimit)
   - [`string`](#string)
     - [`string.objectId()`](#stringobjectid)
     - [`string.colorHexCode()`](#stringcolorhexcode)    
@@ -7,6 +9,17 @@
     - [`array.odd()`](#arrayodd)
 
 ## Joi Extensions
+
+
+### any
+
+#### `any.sizeof(limit)`
+
+Requires the size to be less than or equal to limit.
+
+```js
+const schema = Joi.any().sizeof(20)
+```
 
 
 ### string

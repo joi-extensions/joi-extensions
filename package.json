@@ -12,7 +12,8 @@
     }
   ],
   "dependencies": {
-    "bson": "4.0.4"
+    "bson": "4.0.4",
+    "object-sizeof": "1.6.1"
   },
   "devDependencies": {
     "jest": "26.1.0",

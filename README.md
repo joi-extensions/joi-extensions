@@ -22,6 +22,14 @@ Usage is a two steps process. First, a schema is constructed using the provided 
 
 ```js
 const BaseJoi = require('joi')
+const {AnyExtensions} = require('@joi-extensions/joi-extensions')
+const Joi = BaseJoi.extend(AnyExtensions)
+
+const schema = Joi.any().sizeof(20)
+````
+
+```js
+const BaseJoi = require('joi')
 const {StringExtensions} = require('@joi-extensions/joi-extensions')
 const Joi = BaseJoi.extend(StringExtensions)
 
