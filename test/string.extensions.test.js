@@ -60,4 +60,32 @@ describe('string extensions', () => {
       expect(result.value).toEqual(value)
     })
   })
+
+  describe('ASCII()', () => {
+    const schema = Joi.string().ASCII()
+
+    it('should be valid. The input contains only ASCII characters.', () => {
+      const value = 'A - B'
+      const result = schema.validate(value)
+
+      expect(result.error).toBeUndefined()
+      expect(result.value).toEqual(value)
+    })
+
+    it('should be invalid. The value must be a string.', () => {
+      const value = null
+      const result = schema.validate(value)
+
+      expect(result.error.details[0].message).toBe('"value" must be a string')
+      expect(result.value).toEqual(value)
+    })
+
+    it('should be invalid. The value must contains only ASCII characters.', () => {
+      const value = 'This is a test – of a double dash'
+      const result = schema.validate(value)
+
+      expect(result.error.details[0].message).toBe('"value" must contain only ASCII characters')
+      expect(result.value).toEqual(value)
+    })
+  })
 })
