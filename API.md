@@ -1,15 +1,15 @@
 - [Joi Extensions](#joi-extensions)
-  - [`any`](#any)
-    - [`any.sizeof(limit)`](#anysizeoflimit)
-  - [`string`](#string)
-    - [`string.objectId()`](#stringobjectid)
-    - [`string.colorHexCode()`](#stringcolorhexcode)    
-  - [`array`](#array)
-    - [`array.even()`](#arrayeven)
-    - [`array.odd()`](#arrayodd)
+    - [`any`](#any)
+        - [`any.sizeof(limit)`](#anysizeoflimit)
+    - [`string`](#string)
+        - [`string.objectId()`](#stringobjectid)
+        - [`string.colorHexCode()`](#stringcolorhexcode)
+        - [`string.ASCII()`](#stringcolorhexcode)
+    - [`array`](#array)
+        - [`array.even()`](#arrayeven)
+        - [`array.odd()`](#arrayodd)
 
 ## Joi Extensions
-
 
 ### any
 
@@ -20,7 +20,6 @@ Requires the size to be less than or equal to limit.
 ```js
 const schema = Joi.any().sizeof(20)
 ```
-
 
 ### string
 
@@ -40,6 +39,13 @@ Requires the string to be valid color hex code.
 const schema = Joi.string().colorHexCode()
 ```
 
+#### `string.colorHexCode()`
+
+Requires the string to contain only ASCII characters.
+
+```js
+const schema = Joi.string().ASCII()
+```
 
 ### array
 
